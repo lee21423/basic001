@@ -4,33 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>hover</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <h1>html, css, javascript 수업</h1>
+    <header>
+        <nav class="gnb">
+            <ul class="inner">
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
 
-    <ul>
-        <li>
-            <a href="./01_box01.html" target="_blank">box 가로배치01</a>
-        </li>
-        <li>
-            <a href="./02_box02.html" target="_blank">box 가로배치02 - float</a>
-        </li>
-        <li>
-            <a href="./03_position01.html" target="_blank">box 겹쳐놓기 팝업</a>
-        </li>
-        <li>
-            <a href="./04_position02.html" target="_blank">box 겹쳐놓기 위로올라가는 버튼</a>
-        </li>
-        <li>
-            <a href="./05_position03.html" target="_blank">모바일 메뉴 버튼 만들기</a>
-        </li>
-        <li>
-            <a href="./06_position04.html" target="_blank">슬라이드 화살표 만들기</a>
-        </li>
-    </ul>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sec01 default">
+            <div class="tit">
+                <h2>title</h2>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="inner">
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./imager/con01.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./imager/con02.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./imager/con03.jpg" alt="">
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+        <section class="sec02 default">
+            <div class="tit">
+                <h2>title <span>0</span></h2>
+                <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="inner">
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./imager/con01.jpg" alt="">
+                        <button class="addCart">
+                            <i class="xi-cart-o"></i>
+                        </button>
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./imager/con02.jpg" alt="">
+                        <button class="addCart">
+                            <i class="xi-cart-o"></i>
+                        </button>
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="itm">
+                    <div class="img_box">
+                        <img src="./imager/con03.jpg" alt="">
+                        <button class="addCart">
+                            <i class="xi-cart-o"></i>
+                        </button>
+                    </div>
+                    <strong>Lorem, ipsum.</strong>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
 
+    </main>
+    <footer>&copy;</footer>
+
+    <script>
+        let cartNum = 0;
+        const CART = document.querySelector('.sec02 h2 span')
+        const ADDCARTBTN = document.querySelectorAll(',sec02 .addCart')
+        ADDCARTBTN, forEach(function (it) {
+            it.addEverntlistener('click', function () {
+                cartNum = cartNum + 1;
+                CART.innerHTML = cartNum;
+            })
+            CART.innerHTML = cartNum;
+        })
+
+    </script>
 </body>
 
 </html>
